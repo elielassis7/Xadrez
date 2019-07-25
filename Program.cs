@@ -1,12 +1,15 @@
 ﻿using System;
+using ChessBoard;
 
-namespace Xadrez
-{
+namespace Chess
+    {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Board board = new Board(8,8);
+
+            Console.ReadLine();
         }
     }
 }
