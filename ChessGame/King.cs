@@ -12,7 +12,7 @@ namespace ChessGame
 
         public override string ToString()
         {
-            return "K ";
+            return "K";
         }
     }
 }
