@@ -31,6 +31,7 @@ namespace ChessGame
         {
             Board.PutPiece(new Rook(Board, Color.White), new PositionChess('a',1).ToPosition());
             Board.PutPiece(new Rook(Board, Color.White), new PositionChess('h', 1).ToPosition());
+            Board.PutPiece(new King(Board, Color.White), new PositionChess('d', 1).ToPosition());
 
         }
     }

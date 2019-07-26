@@ -13,9 +13,9 @@
             Pieces = new Piece[Lines, Columns];
         }
 
-        public Piece Piece(int Lines, int Columns)
+        public Piece Piece(int Line, int Column)
         {
-            return Pieces[Lines, Columns];
+            return Pieces[Line, Column];
         }
 
         public Piece Piece(Position pos)
