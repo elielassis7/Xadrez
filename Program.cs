@@ -3,16 +3,34 @@ using ChessBoard;
 using ChessGame;
 
 namespace Chess
-    {
+{
     class Program
     {
         static void Main(string[] args)
         {
-            Board board = new Board(8, 8);
+            try
+            {
+                Game Game = new Game();
 
-            board.PutPiece(new Rook(board, Color.White), new Position(0, 1));
-            board.PutPiece(new Rook(board, Color.Black), new Position(0, 2));
-            Screen.PrintBoard(board);
+                while (!Game.EndGame)
+                {
+                    Console.Clear();
+                    Screen.PrintBoard(Game.Board);
+                    Console.WriteLine();
+                    Console.Write("Origin: ");
+                    Position origin = Screen.ReadPositionChess().ToPosition();
+                    Console.Write("Destination: ");
+                    Position destination = Screen.ReadPositionChess().ToPosition();
+                    Game.RunMotion(origin, destination);
+                }
+                 
+                
+
+            }
+            catch (BoardException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
