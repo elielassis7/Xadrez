@@ -20,6 +20,11 @@
             QtyMovements++;
         }
 
+        public void RemoveQtyMovements()
+        {
+            QtyMovements--;
+        }
+
         public bool ThereisPossibleMoviment()
         {
             bool[,] mat = PossibleMoviment();

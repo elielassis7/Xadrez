@@ -16,6 +16,10 @@ namespace Chess
             Console.WriteLine();
             Console.WriteLine("Move: " + Game.Move);
             Console.WriteLine("Waiting for move: " + Game.CurrentPlayer);
+            if (Game.InCheck)
+            {
+                Console.WriteLine("!!! Check !!!");
+            }
         }
 
         public static void PrintPieceCaptured(Game Game)
