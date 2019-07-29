@@ -17,10 +17,7 @@ namespace Chess
                     try
                     {
                         Console.Clear();
-                        Screen.PrintBoard(Game.Board);
-                        Console.WriteLine();
-                        Console.WriteLine("Move: " + Game.Move);
-                        Console.WriteLine("Waiting for move: " + Game.CurrentPlayer);
+                        Screen.PrintGame(Game);
 
                         Console.WriteLine();
                         Console.Write("Origin: ");
